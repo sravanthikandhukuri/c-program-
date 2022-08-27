@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    char s[20];
+    printf("enter a string\n");
+    gets(s);
+    int i, count=0,lcount=0,num=0;
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(isupper(s[i])) 
+        {
+          count++;
+        }
+        else if(islower(s[i]))
+        {
+            lcount++;
+        }
+else if(isdigit(s[i])) 
+       {
+           num++;
+       }
+    }
+    printf("count of upper case:%d\n",count);
+    printf("count of lower case:%d\n",lcount);
+    printf("count of numbers:%d",num);
+    return 0;
+}
